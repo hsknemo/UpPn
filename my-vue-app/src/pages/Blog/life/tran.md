@@ -4,7 +4,7 @@
 
 > 取名叫做 Tran
 
-<img width="600px" height="600px" src="../../../../public/img/tran_ui.png"> 
+<img width="500px" height="400px" src="../../../../public/img/tran_ui.png"> 
 
 ```up-br
 ```
@@ -28,6 +28,32 @@
 ```up-br
 ```
 
-技术栈：```up-keyword Node Express``` ```up-keyword Vue3``` ```up-keyword WebSocket ```
+- 11-3 ~ 11-4 增加新的功能
+
+```up-br
+```
+
+- ```up-keyword ws 聊天及群组聊天```
+
+
+<img width="900px" height="500px" src="../../../../public/img/tran/Snipaste_2025-11-05_13-24-26.png"> 
+
+```up-br
+```
+
+<img width="900px" height="500px" src="../../../../public/img/tran/Snipaste_2025-11-05_13-26-22.png"> 
+
+
+```up-br
+```
+
+<img width="900px" height="500px" src="../../../../public/img/tran/Snipaste_2025-11-05_13-33-14.png"> 
+
+
+
+```up-br
+```
+
+技术栈：```up-keyword Express``` ```up-keyword Vue3``` ```up-keyword TypeScript ``` ```up-keyword WebSocket ```
 
 
