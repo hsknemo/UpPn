@@ -126,7 +126,15 @@ const draw = {
     ...new Template({
       path: 'test/draw-she-qu-xian',
       name: '弯曲的蛇形曲线',
-      time: 'Dec 5 2022',
+      time: '24 Dec 5',
+      readTime: '5 min'
+    })
+  },
+  'v3-study': {
+    ...new Template({
+      path: 'front/vue3-study',
+      name: 'vue3 上面的技巧方法',
+      time: '25 Nov 11',
       readTime: '5 min'
     })
   },
@@ -205,6 +213,7 @@ const data = {
   // 画页面
   这个页面这么画: [
     draw["draw-she-qu-xian"],
+    draw["v3-study"],
   ],
   "观影": [
     movie['dong-ji-dao'],

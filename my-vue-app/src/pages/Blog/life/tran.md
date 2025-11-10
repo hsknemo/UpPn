@@ -50,9 +50,27 @@
 <img width="900px" height="500px" src="./img/tran/Snipaste_2025-11-05_13-33-14.png"> 
 
 
+```up-br
+```
+
+- 11-8 夜晚 增加 ```up-keyword 便签``` 功能
 
 ```up-br
 ```
+
+<img width="900px" height="500px" src="./img/note/note3.png"> 
+
+```up-br
+```
+
+<img width="900px" height="500px" src="./img/note/note.png"> 
+```up-br
+```
+<img width="900px" height="500px" src="./img/note/note2.png"> 
+```up-br
+```
+
+
 
 技术栈：```up-keyword Express``` ```up-keyword Vue3``` ```up-keyword TypeScript ``` ```up-keyword WebSocket ```
 
