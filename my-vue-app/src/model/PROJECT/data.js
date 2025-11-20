@@ -7,9 +7,20 @@ import Blog from './iconComponent/Blog.vue'
 import Terminal from './iconComponent/Terminal.vue'
 import mapbox from "@/model/PROJECT/iconComponent/Mapbox.vue";
 import Tone from "@/model/PROJECT/iconComponent/Tone.vue";
-
+import Tran from '@/model/PROJECT/iconComponent/Tran.vue'
 const Projects = reactive({
   pro: [
+    {
+      capName: '团队工具',
+      capList: [
+        {
+          icon: Tran,
+          name: 'VTran',
+          desc: '由于内网开发，不让使用聊天及文件发送工具，索性就自己写了一个',
+          url: 'https://trandoc.netlify.app/'
+        },
+      ]
+    },
     {
       capName: 'Chrome 插件',
       capList: [
