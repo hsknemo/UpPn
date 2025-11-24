@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as t}from"./index-4761f9a2.js";const c={},o={class:"null-message-wrap default-text"};function a(n,r){return s(),t("div",o," 啦啦啦~ 等待更新哦 yo~ ")}const l=e(c,[["render",a]]);export{l as default};
