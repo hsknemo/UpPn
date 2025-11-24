@@ -10,7 +10,7 @@ const e={},n=`<h2>切片上传</h2>
 <li>多个文件的话 那就以文件为单位进行切片 调用 <code>up-keyword fileChunkCut </code> 方法组装数据</li>
 <li>注意：如果遇到了切割大文件的性能问题，可以将切割的逻辑拆分到 <code>up-keyword WebWorker</code> 切一组就传一次，注意关闭释放 work 调用 <code>up-keyword work.terminate() </code> 方法</li>
 <li>组装切片formData,根据 切片数量 循环调用接口发送</li>
-<li>如果发送完毕接收到后台的上传完毕事件，则调用 merge 接口将文件合并，merge 接口传递当前上传文件的hash 值</li>
+<li>如果发送完毕接收到后台的上传完毕的状态（每次提交chunk 的时候都要返回这个状态），则调用 merge 接口将文件合并，merge 接口传递当前上传文件的hash 值</li>
 </ul>
 </li>
 </ul>
