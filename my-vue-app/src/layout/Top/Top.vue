@@ -35,8 +35,13 @@ export default defineComponent({
   box-sizing: border-box;
   // background-color: var(--bg-color);
   .l {
+    position: relative;
     padding-left: .3em;
 
+    img {
+      display: block;
+
+    }
     .Logo {
       font-size: 36px;
       color: var(--half-gray-128);

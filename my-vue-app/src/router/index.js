@@ -1,7 +1,7 @@
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 // 双拼路由
 import udpn from './udpn'
 // Blog 路由
@@ -56,7 +56,7 @@ var routes = [
 ]
 
 export const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: routes
 })
 
