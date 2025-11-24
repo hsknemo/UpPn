@@ -130,12 +130,24 @@ const draw = {
       readTime: '5 min'
     })
   },
+
+}
+
+const frontKnowlage = {
   'v3-study': {
     ...new Template({
       path: 'front/vue3-study',
       name: 'vue3 上面的技巧方法',
       time: '25 Nov 11',
       readTime: '5 min'
+    })
+  },
+  'chunk-upload': {
+    ...new Template({
+      path: 'front/chunk-upload',
+      name: '切片上传',
+      time: '25 Nov 24',
+      readTime: '10 min'
     })
   },
 }
@@ -186,6 +198,11 @@ const classes = {
 
 
 const data = {
+  前端: [
+    frontKnowlage["v3-study"],
+    frontKnowlage['chunk-upload'],
+  ],
+
   // 技能篇
   // 技能篇: [
   //   skill.土发造炮,
@@ -200,6 +217,8 @@ const data = {
     life.周日日记,
     life.新的希望,
     life.tran,
+    movie['dong-ji-dao'],
+    movie['xiao-shen-ke'],
     // life.送给老弟,
   ],
   // 心灵鸡汤
@@ -213,12 +232,8 @@ const data = {
   // 画页面
   这个页面这么画: [
     draw["draw-she-qu-xian"],
-    draw["v3-study"],
   ],
-  "观影": [
-    movie['dong-ji-dao'],
-    movie['xiao-shen-ke'],
-  ],
+
 }
 
 
