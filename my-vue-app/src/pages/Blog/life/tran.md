@@ -63,10 +63,12 @@
 ```up-br
 ```
 
-<img width="900px" height="500px" src="/img/note/note.png"> 
+<img width="900px" height="500px" src="/img/note/note.png">
+
 ```up-br
 ```
 <img width="900px" height="500px" src="/img/note/note2.png"> 
+
 ```up-br
 ```
 
