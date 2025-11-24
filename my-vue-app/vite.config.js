@@ -5,7 +5,7 @@ const mdPlugin = require('vite-plugin-markdown')
 import path from 'path'
 
 export default defineConfig({
-  base: './',
+  base: '/',
   server: {
     host: 'localhost',
     cors: true,
