@@ -45,8 +45,19 @@
   width: 50%;
   padding: 1.2em;
   box-sizing: border-box;
-  font-family: var(--inter-font-family);
+
+
+
+
   ::v-deep {
+    * {
+      font-family: fantasy !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      a {
+        display: none;
+      }
+    }
     p {
       margin-top: 2em;
       color: var(--half-gray-128);
