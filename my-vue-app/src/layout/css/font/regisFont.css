@@ -8,3 +8,8 @@
   font-family: 'inter var';
   src: url(./Inter.ttf);
 }
+
+@font-face {
+  src: url('./InputMono.ttf');
+  font-family: 'input-mono';
+}

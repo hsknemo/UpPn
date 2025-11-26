@@ -10,6 +10,7 @@
     - 注意：如果遇到了切割大文件的性能问题，可以将切割的逻辑拆分到 ```up-keyword WebWorker``` 切一组就传一次，注意关闭释放 work 调用 ```up-keyword work.terminate() ``` 方法
     - 组装切片formData,根据 切片数量 循环调用接口发送
     - 如果发送完毕接收到后台的上传完毕的状态（每次提交chunk 的时候都要返回这个状态），则调用 merge 接口将文件合并，merge 接口传递当前上传文件的hash 值
+
 ```js
 const fileChunkCut = async (file: UploadFile, resolve: (value: boolean) => void) => {
   // 确保 file.raw 存在且为 File 类型

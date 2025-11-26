@@ -1,22 +1,22 @@
 ## mapbox课程1 初始化地图
 
-<br/>
+
 
 - 课程地址
 
-<br/>
+
 
 <a style="display: flex; align-items: center" href='https://www.bilibili.com/video/BV19V3ozFEA7/?spm_id_from=333.1387.homepage.video_card.click' target='_blank'>
 <img style="display: block;margin-right: 10px; filter: grayscale(1)" width="20rem" height="20rem" src="https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico" alt="">课程地址
 </a>
 
-<br/>
 
-<br/>
 
-> <span style='border: 2px solid #353535; padding: 5px;'>序</span>: Hi! 你好，欢迎来到Mapbox GL JS课程。本章节介绍如何初始化地图。
 
-<br/>
+
+> Hi! 你好，欢迎来到Mapbox GL JS课程。本章节介绍如何初始化地图。
+
+
 
 - HTML
 ```html
@@ -44,20 +44,16 @@ const map = new mapboxgl.Map({
 })
 ```
 
-<br/>
 
-<span style='border: 2px solid #353535; padding: 5px;'>注</span>:
 
-<br/>
+- 注意
 
 > mapbox 没有style 配置的话是加载不出来东西的哟~
 
-<br/>
 
-<span style='border: 2px solid #353535; padding: 5px;'>结</span>:
-
-<br/>
-
+- 结尾
 > 如果有不正确的地方，请及时联系我进行更正，感谢观看。
 
 > 致敬不断努力、不断进步的你。
+
+``编辑于2025年11月26日09:24:48``

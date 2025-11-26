@@ -18,7 +18,7 @@ export default defineConfig({
       imports: ["vue", "vue-router"]
     }),
     mdPlugin.plugin({
-      mode: ['html']
+      mode: ['html'],
     }),
   ],
   resolve: {

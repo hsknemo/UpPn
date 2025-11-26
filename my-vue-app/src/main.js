@@ -10,7 +10,7 @@ import Router from './router/index'
 import Store from './store/index'
 import '@/layout/css/theme.scss'
 import hljs from 'highlight.js';
-import 'highlight.js/styles/cybertopia-saturated.css' //样式
+import 'highlight.js/styles/cybertopia-saturated.min.css' //样式
 import '@/assets/movie/card.scss'
 import ExpMarkdownCustome from '@/plugins/index'
 import upMovieItem from "@/plugins/up-MovieItem";
@@ -30,6 +30,8 @@ app.directive('highlight',function (el) {
   ExpMarkdownCustome.upAnchorKeyWord(el)
   ExpMarkdownCustome.upBreak(el)
   ExpMarkdownCustome.upAnimateText(el)
+  ExpMarkdownCustome.upImage(el)
+  ExpMarkdownCustome.upHtagRevertAchor(el)
 
   let blocks = el.querySelectorAll('pre code');
 

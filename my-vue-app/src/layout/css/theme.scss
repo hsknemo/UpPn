@@ -3,6 +3,7 @@
 @import url('./font/regisFont.css');
 @import url('./markdown.css');
 
+
 html:root {
   --half-gray-128: rgb(128, 128, 128);
   --cut-theme-font-icon-size: 22px;
@@ -77,16 +78,12 @@ a {
 
 
 .blog_img {
-  margin: 10px 0;
+  margin: 10px auto;
   width: 600px;
   height: 300px;
-  box-shadow: 0 0 5px 0  var(--half-gray-128);
   object-fit: scale-down;
   border-radius: 10px;
   transition: all .3s;
-  &:hover {
-    transform: scale(1.2);
-  }
 
 }
 @mixin hover-highlight-text($startColor:#e7ff00, $endColor:#f46527) {
@@ -115,6 +112,9 @@ a {
   animation: text-ani 1s linear infinite;
 }
 @mixin mine-markdown {
+  h1,h2,h3,h4,h5,h6 {
+    margin: 1rem 0;
+  }
   .keyword, .keyword a {
     transition: all .3s;
   }
@@ -125,17 +125,57 @@ a {
       @include hover-highlight-text();
     }
   }
+  h1,h2,h3,h4,h5,h6 {
+    position: relative;
+    a {
+      position: absolute;
+      margin-left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      padding-bottom: unset;
+      transition: color .3s linear;
+      color: transparent;
+    }
+
+    &:hover {
+      a {
+        opacity: 1;
+        color: inherit;
+        border-bottom: unset;
+      }
+    }
+  }
   a {
     color: var(--half-gray-128);
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    transition: border-bottom-color .3s linear;
+    &:hover {
+      border-bottom: 1px solid var(--half-gray-128);
+    }
   }
+
+
+  ul {
+    margin: 5px 0;
+  }
+
+  img {
+    margin: 10px auto;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
   blockquote {
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     background-color: rgba(136, 136, 136, 0.3);
-    border-radius: 3px;
+    border-radius: 1px;
     color: var(--half-gray-128);
     border-left:5px solid var(--half-gray-128);
+    width: fit-content;
   }
 
   .b_block {
@@ -174,14 +214,17 @@ a {
 
     code {
       min-height: 50px;
+      border-radius: 5px;
+      font-family: input-mono;
+      font-size: 14px;
     }
   }
 
 
   .cp_btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 8px;
     border: none;
     cursor: pointer;
     background-color: unset;

@@ -33,9 +33,12 @@ export default defineComponent({
   justify-content: space-between;
   padding: 1em;
   box-sizing: border-box;
+  justify-content: end;
   // background-color: var(--bg-color);
   .l {
-    position: relative;
+    position: fixed;
+    top: 10px;
+    left: 0;
     padding-left: .3em;
 
     img {

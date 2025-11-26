@@ -1,9 +1,10 @@
-# 这个页面这么画之
-## 【蛇形曲线图带节点】
+# 蛇形曲线图带节点
 
 ### 1. 图片
 
-<img class="blog_img" src="./img/she-qu.jpg">
+```up-img
+/img/she-qu.jpg
+```
 
 ### html 结构
 ```html

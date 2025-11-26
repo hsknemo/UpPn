@@ -2,8 +2,25 @@
 import Title from '@/layout/Title/index.vue'
 import ListItem from './Components/ListItem.vue'
 import Model from '@/model/PROJECT/index.js'
+import { onMounted } from 'vue'
 const Project = Model.readByKey('pro')
 
+
+const splitN = function(str) {
+  return str.replace(/\s/g, '')
+}
+
+const onJump = function(hash) {
+  let jumpHash = document.getElementById('hash-' + hash)
+  jumpHash && jumpHash.click()
+}
+onMounted(() => {
+  let urlHash = window.location.hash
+  if (urlHash) {
+    let decodeHash = decodeURIComponent(urlHash.substring(1))
+    onJump(decodeHash)
+  }
+})
 </script>
 
 <template>
@@ -13,17 +30,17 @@ const Project = Model.readByKey('pro')
            :key="index"
            v-for="(pro, index) in Project"
       >
-        <a :href="'#' + pro.capName">{{ pro.capName }}</a>
+        <a :id="'hash-' + splitN(pro.capName)" :href="'#' + splitN(pro.capName)">{{ pro.capName }}</a>
       </div>
     </div>
-    <div class="right_container">
+    <div class="right_container" >
       <Title title="Projects" />
       <div
         class="list-container max-full"
         :key="index"
         v-for="(pro, index) in Project"
       >
-        <div class="catgory-name" :id="pro.capName">
+        <div class="catgory-name" :id="splitN(pro.capName)">
           {{ pro.capName }}
         </div>
         <div class="catgory-item">
@@ -52,11 +69,11 @@ const Project = Model.readByKey('pro')
 .flex-body {
   overflow: auto;
   max-height: 800px;
- @include flexStyle();
+  scroll-behavior: smooth;
   .left_page_list {
-    position: sticky;
-    top: 2px;
-    margin-right: 10rem;
+    position: fixed;
+    top: 150px;
+    left: 40px;
     width: 10%;
     .page_list_item {
       width: fit-content;
@@ -120,5 +137,6 @@ const Project = Model.readByKey('pro')
 
 .right_container {
   width: 60%;
+  margin: auto;
 }
 </style>
