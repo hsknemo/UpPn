@@ -201,6 +201,15 @@ const data = {
   前端: [
     frontKnowlage["v3-study"],
     frontKnowlage['chunk-upload'],
+
+  ],
+  做的一些项目: [
+    life.tran,
+  ],
+
+  影视: [
+    movie['dong-ji-dao'],
+    movie['xiao-shen-ke'],
   ],
 
   // 技能篇
@@ -216,7 +225,6 @@ const data = {
     life.上海疫情,
     life.周日日记,
     life.新的希望,
-    life.tran,
     movie['dong-ji-dao'],
     movie['xiao-shen-ke'],
     // life.送给老弟,

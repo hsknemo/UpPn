@@ -162,14 +162,22 @@ img {
   }
 }
 
+@mixin fixHTag {
+  h1, h2, h3, h4, h5, h6 {
+    a {
+      display: none !important;
+    }
+  }
+}
+
 .db_card_container {
   @include flexStyle(center, space-around);
   max-width: 768px;
   border-radius: 5px;
   padding: 10px 15px 15px ;
   background-color: $cardColor;
-  transition: all .3s linear;
-  box-shadow: 0px 0px 3px 0px $cardColor;
+
+  @include fixHTag();
 
   @include img();
 
@@ -179,5 +187,4 @@ img {
 
   @include mid();
 
-  @include hover_card();
 }
