@@ -96,6 +96,7 @@
     font-size: 1em;
     color: var(--half-gray-128);
     transition: .3s color ease;
+    width: fit-content;
     &.active,
     &:hover {
       color: var(--intro-h1)
