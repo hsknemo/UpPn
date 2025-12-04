@@ -13,6 +13,7 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/cybertopia-saturated.min.css' //样式
 import '@/assets/movie/card.scss'
 import ExpMarkdownCustome from '@/plugins/index'
+import 'virtual:uno.css';
 import upMovieItem from "@/plugins/up-MovieItem";
 /* 挂接 */
 const app = createApp(App)

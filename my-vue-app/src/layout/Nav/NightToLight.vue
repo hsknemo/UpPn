@@ -17,23 +17,23 @@ export default defineComponent({
 
     /* 设置根元素的换肤属性 */
     function addBodyAttr(mode, removeClass) {
-      document.documentElement.setAttribute(mode, mode)
-      document.documentElement.removeAttribute(removeClass)
+      document.documentElement.classList.add(mode)
+      document.documentElement.classList.remove(removeClass)
     }
 
 
     function onThemeCut() {
       nextTick(_ => {
           setTimeout(() => {
-            changeMode(preferredColor.value) 
-            currentTheme.value = preferredColor.value            
+            changeMode(preferredColor.value)
+            currentTheme.value = preferredColor.value
           }, 100);
       })
       window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
         console.log('运行')
         nextTick(_ => {
           setTimeout(() => {
-            changeMode(preferredColor.value)            
+            changeMode(preferredColor.value)
           }, 100);
         })
       })
@@ -44,15 +44,15 @@ export default defineComponent({
       const modeMap = {
         light: _ => {
           currentTheme.value = 'light'
-          addBodyAttr('light', 'night')
+          addBodyAttr('light', 'dark')
         },
         dark: _ => {
           currentTheme.value = 'dark'
-          addBodyAttr('night', 'light')
+          addBodyAttr('dark', 'light')
         },
         'no-preference': _ => {
           currentTheme.value = 'light'
-          addBodyAttr('light', 'night')
+          addBodyAttr('light', 'dark')
         }
       }
       return modeMap[mode]()
@@ -81,11 +81,11 @@ export default defineComponent({
      @click="changeMode('dark')"
       v-if="currentTheme === 'light'"
     />
-    
+
     <Night
       class="icon"
-     @click="changeMode('light')" 
-     v-if="currentTheme === 'dark'" 
+     @click="changeMode('light')"
+     v-if="currentTheme === 'dark'"
     />
   </div>
 </template>

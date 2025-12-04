@@ -1,8 +1,9 @@
-[night]:root{
+.dark:root{
   --un-bg-opacity: 1;
   --nav-bg-color: rgba(34,34,34,var(--un-bg-opacity));
   --bg-opcity: .75;
   --bg-color: rgba(8,8, 8, var(--bg-opcity));
+
 
   /* 进度条颜色 */
   --ngprogress-bar-color: #fff;
@@ -22,4 +23,5 @@
   --logo-filter-color: invert(1);
 
   --stroke-text-color: rgba(128, 128, 128);
+  color: #fff;
 }

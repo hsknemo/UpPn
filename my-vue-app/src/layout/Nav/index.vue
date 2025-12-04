@@ -13,6 +13,10 @@ export default defineComponent({
                     name: "Project",
                     path: "/project"
                 },
+              {
+                name: "Recent",
+                path: "/recent"
+              },
             ]
         });
         return {

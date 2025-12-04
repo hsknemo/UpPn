@@ -17,6 +17,7 @@ import PlayGround from '../playground/echarts.vue'
 const Layout = () => import('@/layout/index.vue')
 import LineVue from '../playground/Line.vue'
 import Board from './DrawBoard/index'
+import Recent from '@/router/Recent'
 
 var routes = [
   {
@@ -38,6 +39,7 @@ var routes = [
       Project,
       Gernerator,
       Terminal,
+      Recent,
       {
         path: '/posts/:md*',
         component: () => import('@/pages/Blog/template.vue'),
