@@ -56,7 +56,7 @@
 </script>
 
 <template>
-  <div class="max-full max-full-5 mt-3">
+  <div >
     <Title title="Blogs"></Title>
     <div class="title-wrap">
       <Title

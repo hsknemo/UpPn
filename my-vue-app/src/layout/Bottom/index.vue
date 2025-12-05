@@ -19,10 +19,6 @@ const onExit = function () {
 <template>
   <div
       class="cd-container"
-      :class="[
-           {'max-full': reactive_store.isFull},
-           {'max-full-5': !reactive_store.isFull}
-       ]"
       v-if="!(['/', '/index'].includes(router.currentRoute.value.fullPath))">
     <span @click="onExit">
       cd ../

@@ -188,10 +188,11 @@ export default defineComponent({
   </div>
   <div class="template-container"
        ref="template_container"
-       :class="[
-           {'max-full': reactive_store.isFull},
-           {'max-full-5': !reactive_store.isFull}
-       ]"
+       m-auto
+       sm:w-full
+       md:w-screen-md
+       xl:w-screen-md
+      px-15
        v-html="str"
        v-highlight
   >
@@ -202,7 +203,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
   .template-container {
-    padding: 15px 15px;
     scroll-behavior: smooth;
     overflow: auto;
     max-height: 850px;
@@ -241,7 +241,6 @@ export default defineComponent({
     overflow: auto;
     opacity: 0;
     transition: opacity .3s linear;
-    background-color: var(--half-gray-128-o-3);
     padding: 5px;
     border-radius: 5px;
     &:hover {
@@ -263,6 +262,7 @@ export default defineComponent({
     :deep {
       a {
         color: var(--half-gray-128);
+        text-decoration: unset;
       }
     }
   }

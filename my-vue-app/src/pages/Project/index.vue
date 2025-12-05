@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="max-full  default-text mt-3 flex-body">
+  <div class="flex-body">
     <div class="left_page_list">
       <div class="page_list_item"
            :key="index"
@@ -36,7 +36,7 @@ onMounted(() => {
     <div class="right_container" >
       <Title title="Projects" />
       <div
-        class="list-container max-full"
+        class="list-container"
         :key="index"
         v-for="(pro, index) in Project"
       >
@@ -100,6 +100,7 @@ onMounted(() => {
       display: block;
       transition: color 0.2s linear;
       color: var(--half-gray-128-o-3);
+      text-decoration: unset;
     }
   }
 
@@ -135,8 +136,4 @@ onMounted(() => {
   }
 }
 
-.right_container {
-  width: 60%;
-  margin: auto;
-}
 </style>

@@ -108,10 +108,6 @@ const computedTimeForNow = (time) => {
 }
 
 .recent_body {
-  @apply w-screen-sm
-  ma;
-
-
   .demo_body {
     padding-top: 20px;
 

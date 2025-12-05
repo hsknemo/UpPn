@@ -16,8 +16,19 @@ export default defineComponent({
 <template>
   <div class="layout-container">
     <Top />
-    <router-view></router-view>
-    <Bottom />
+    <router-view
+      m-auto
+      sm:w-full
+      md:w-screen-md
+      xl:w-screen-md
+    ></router-view>
+    <Bottom
+      max-sm:px15
+      m-auto
+      md:w-screen-md
+      sm:w-full
+      xl:w-screen-md
+    />
     <unoDirectionBall />
   </div>
 </template>
