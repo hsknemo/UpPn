@@ -1,7 +1,10 @@
-# Vue 3 + Vite
+# Nemo Diary  
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Hello Guys! 
+  Welcome to my Blog! I am nemo, a frontend developer from ShangHai, China. I love using my skills  to help people to resolve problems.
 
-## Recommended IDE Setup
+  I am a big fan of open source, and I am very happy to share my knowledge with you.
+  
+  If you like my blog, you can give me a star on GitHub.https://github.com/hsknemo/UpPn
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+  Find Me: [GitHub](https://github.com/hsknemo)
