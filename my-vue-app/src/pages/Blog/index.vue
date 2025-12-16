@@ -7,7 +7,7 @@
   import { useRouter, useRoute } from 'vue-router'
   import Fa7BrandsEllo from '@/model/PROJECT/iconComponent/ChildMenu.vue'
   defineComponent({
-    name: 'BlogItem',
+    name: 'BlogPage',
   })
   import { reactive } from 'vue'
   const isOpen = ref(false)
@@ -44,43 +44,46 @@
 </script>
 
 <template>
-  <div class="btom-menu">
-    <Fa7BrandsEllo  @click="isOpen = !isOpen"/>
-  </div>
-  <div >
-    <Title title="Blogs"></Title>
-    <div class="title-wrap"
-         :class="[
+  <div>
+    <div class="btom-menu">
+      <Fa7BrandsEllo  @click="isOpen = !isOpen"/>
+    </div>
+    <div >
+      <Title title="Blogs"></Title>
+      <div class="title-wrap"
+           :class="[
            {
              'slide-up-transition': isOpen
            }
          ]"
-    >
-      <Title
-        v-for="(item, index) in Blog.blogCat"
-        :key="index"
-        @click="readBlogDataByKey(item)"
-        class="title-item"
-        :class="Blog.currentTag === item ? 'active' : ''"
-        :title="item"
-      />
-    </div>
+      >
+        <Title
+          v-for="(item, index) in Blog.blogCat"
+          :key="index"
+          @click="readBlogDataByKey(item)"
+          class="title-item"
+          :class="Blog.currentTag === item ? 'active' : ''"
+          :title="item"
+        />
+      </div>
 
-    <template v-if="Blog.currentBlog.length">
-      <div class="post-item" v-for="item in Blog.currentBlog">
-        <span class="anchor" @click="onJumpMd(item)">{{ item.name}}</span>
-<!--        <RouterLink :to="'/posts/' + item.path + `?max-full=${item.isCodeArea}`">{{ item.name}}</RouterLink>-->
-        <div class="other">
-          <span>{{ item.time }} · <span class="readTime">{{ item.readTime }}</span></span>
+      <template v-if="Blog.currentBlog.length">
+        <div class="post-item" v-for="item in Blog.currentBlog">
+          <span class="anchor" @click="onJumpMd(item)">{{ item.name}}</span>
+          <!--        <RouterLink :to="'/posts/' + item.path + `?max-full=${item.isCodeArea}`">{{ item.name}}</RouterLink>-->
+          <div class="other">
+            <span>{{ item.time }} · <span class="readTime">{{ item.readTime }}</span></span>
+          </div>
         </div>
+      </template>
+
+      <template v-else>
+        <NullMessage />
+      </template>
+
     </div>
-    </template>
-
-    <template v-else>
-      <NullMessage />
-    </template>
-
   </div>
+
 </template>
 
 <style lang="scss" scoped>
