@@ -11,11 +11,11 @@
   })
 
   readmd(async target => {
-    if (localStorage.getItem('writed')) {
+    if (localStorage.getItem('wrote')) {
       mineRef.value = target.html
       return
     }
-    localStorage.setItem('writed', true)
+    localStorage.setItem('wrote', true)
     for (let i = 0; i < target.html.length; i++) {
       await delay(1000 / 60)
       mineRef.value += target.html[i]
