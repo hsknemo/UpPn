@@ -51,4 +51,16 @@ export default defineComponent({
     }
   }
 }
+
+@media (max-width: 639.9px) {
+  .top-container {
+    margin-bottom: 10px !important;
+  }
+  .top-container .l {
+    top: 0 !important;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 999;
+  }
+}
 </style>

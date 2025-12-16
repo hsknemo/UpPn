@@ -16,7 +16,7 @@ import Pin from './IconComponent/Pin.vue'
   <a  href="https://github.com/hsknemo" target="_brand">
     <Git class="icon" />
   </a>
-  <NightToLight />
+  <NightToLight class="max-sm:hidden!"/>
 
 </template>
 

@@ -192,7 +192,7 @@ export default defineComponent({
        sm:w-full
        md:w-screen-md
        xl:w-screen-md
-      px-15
+       px-15
        v-html="str"
        v-highlight
   >

@@ -1,6 +1,6 @@
 .light:root{
   --nav-bg-color: #fff;
-  --bg-opcity: 1;
+  --bg-opcity: .75;
   --bg-color: rgba(255,255,255, var(--bg-opcity));
 
   /* 进度条颜色 */

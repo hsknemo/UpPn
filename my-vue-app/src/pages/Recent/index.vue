@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import moment from 'moment'
 
 const demoList = [
@@ -15,7 +15,7 @@ const demoList = [
     magicTag: '1.6',
     time: '2025-12-03 13:56:00',
     link: 'https://github.com/hsknemo/vtran-server.git'
-  },
+  }
 ]
 
 const computedTimeForNow = (time) => {
@@ -37,35 +37,35 @@ const computedTimeForNow = (time) => {
   <div class="recent_body"
 
   >
-    <div class="author" rounded w-18 h-18 m-auto rounded-full overflow-hidden>
-      <img w-full h-full src="https://avatars.githubusercontent.com/u/42964542?v=4" alt="">
+    <div class="author" h-18 m-auto overflow-hidden rounded rounded-full w-18>
+      <img alt="" h-full src="https://avatars.githubusercontent.com/u/42964542?v=4" w-full>
     </div>
-    <div class="tip" text-center mt-2 text-3xl>
+    <div class="tip" mt-2 text-3xl text-center>
       <a href="https://github.com/hsknemo">Nemo</a> is <span animate-pulse>Releasing...</span>
     </div>
 
     <div p4>
-      <hr ma  w-20 op15 />
+      <hr ma op15 w-20 />
     </div>
 
     <div class="demo_body">
-      <div class="demo_box"
-           mb5
+      <div v-for="(item, index) in demoList"
            :key="index"
-           v-for="(item, index) in demoList">
+           class="demo_box"
+           mb5>
 
         <div class="d_top" flex justify-between>
           <div class="demo_tit">
             <a
-              target="_blank"
-              :href="item.link">{{ item.title }}</a>
+              :href="item.link"
+              target="_blank">{{ item.title }}</a>
           </div>
           <div class="demo_version">
             <a
-              target="_blank"
-              :href="item.link">{{ item.version }}<span rounded px0.8 mx--0.8 font-bold dark:text-green-3 text-green-7
-                                                        bg-green:15>{{ item.magicTag }}</span></a>
-            <time text-sm op50>{{ computedTimeForNow(item.time) }}</time>
+              :href="item.link"
+              target="_blank">{{ item.version }}<span bg-green:15 dark:text-green-3 font-bold mx--0.8 px0.8 rounded
+                                                        text-green-7>{{ item.magicTag }}</span></a>
+            <time op50 text-sm>{{ computedTimeForNow(item.time) }}</time>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const computedTimeForNow = (time) => {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 @mixin demoBoxStyle {
   a:hover {

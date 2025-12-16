@@ -18,7 +18,7 @@ export default defineComponent({
     <Top />
     <router-view
       m-auto
-      sm:w-full
+      max-sm:w-full!
       md:w-screen-md
       xl:w-screen-md
     ></router-view>

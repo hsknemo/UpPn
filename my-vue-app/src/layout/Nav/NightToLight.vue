@@ -107,4 +107,15 @@ export default defineComponent({
     color: var(--half-gray-128);
   }
 }
+
+@media (max-width: 750px) {
+  //.s-c-n {
+  //  position: fixed;
+  //  top: 5px;
+  //  right: 42px;
+  //  z-index: 999;
+  //  width: unset !important;
+  //}
+
+}
 </style>

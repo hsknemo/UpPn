@@ -134,6 +134,9 @@ onMounted(() => {
   .catgory-item {
     grid-template-columns: unset;
   }
+  .left_page_list {
+    display: none;
+  }
 }
 
 </style>

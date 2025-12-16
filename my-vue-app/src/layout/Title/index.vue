@@ -12,4 +12,11 @@
   font-weight: var(--intro-h1-fonWeight);
   font-family: var(--inter-font-family);
 }
+
+@media (max-width: 750px) {
+  .title {
+    text-align: center;
+  }
+
+}
 </style>
