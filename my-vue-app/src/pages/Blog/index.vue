@@ -160,6 +160,11 @@
       transform: translateY(0);
     }
   }
+
+  .post-item {
+    padding: 0 60px;
+  }
+
   .btom-menu {
     width: 100%;
     display: flex;

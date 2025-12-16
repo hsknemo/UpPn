@@ -122,7 +122,7 @@ const isOpen = ref(false);
     :deep {
       .s-c-n {
         position: relative;
-        top: -1px;
+        top: -2px;
       }
     }
 
