@@ -9,15 +9,15 @@ defineComponent({
 const Nav = reactive({
   navData: [
     {
-      name: "Blog",
+      name: "BLOG",
       path: "/Blog"
     },
     {
-      name: "Project",
+      name: "PROJECT",
       path: "/project"
     },
     {
-      name: "Recent",
+      name: "RECENT",
       path: "/recent"
     },
   ]
@@ -96,6 +96,11 @@ const isOpen = ref(false);
       transform: unset;
     }
     :deep {
+      @for $i from 4 through 5 {
+        a:nth-child(#{$i}) {
+          display: none;
+        }
+      }
       a {
         width: 100%;
         display: block;
@@ -107,6 +112,8 @@ const isOpen = ref(false);
         color: inherit !important;
       }
     }
+
+
   }
 
   .menu_btn {
