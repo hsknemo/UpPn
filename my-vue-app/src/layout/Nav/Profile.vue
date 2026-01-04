@@ -10,9 +10,9 @@ import Pin from './IconComponent/Pin.vue'
   <router-link to="/Udpn">
     <Pin class="icon" />
   </router-link>
-  <router-link to="/Gernerator">
-    <Gernerator class="icon" />
-  </router-link>
+<!--  <router-link to="/Gernerator">-->
+<!--    <Gernerator class="icon" />-->
+<!--  </router-link>-->
   <a  href="https://github.com/hsknemo" target="_brand">
     <Git class="icon" />
   </a>
