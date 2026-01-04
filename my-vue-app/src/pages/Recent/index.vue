@@ -3,6 +3,13 @@ import moment from 'moment'
 
 const demoList = [
   {
+    title: 'MapLite',
+    version: 'v1.',
+    magicTag: '1.0',
+    time: '2025-12-27 00:00:00',
+    link: 'https://github.com/hsknemo/map-lite-doc'
+  },
+  {
     title: 'VTran',
     version: 'v1.',
     magicTag: '1.9',
