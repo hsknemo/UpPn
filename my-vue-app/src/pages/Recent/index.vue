@@ -5,8 +5,8 @@ const demoList = [
   {
     title: 'MapLite',
     version: 'v1.',
-    magicTag: '1.0',
-    time: '2025-12-27 00:00:00',
+    magicTag: '0.0',
+    time: '2026-01-04 14:00:00',
     link: 'https://github.com/hsknemo/map-lite-doc'
   },
   {
