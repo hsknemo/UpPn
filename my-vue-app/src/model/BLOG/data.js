@@ -150,6 +150,22 @@ const frontKnowlage = {
       readTime: '10 min'
     })
   },
+  ku: {
+    ...new Template({
+      path: 'front/front-lib',
+      name: '前端库 📂',
+      time: '07 Jan 26',
+      readTime: '5 min'
+    })
+  },
+  hotKey: {
+    ...new Template({
+      path: 'front/hotkey',
+      name: '快捷键',
+      time: '07 Jan 26',
+      readTime: '5 min'
+    })
+  }
 }
 
 const movie = {
@@ -201,7 +217,8 @@ const data = {
   前端: [
     frontKnowlage["v3-study"],
     frontKnowlage['chunk-upload'],
-
+    frontKnowlage['ku'],
+    frontKnowlage['hotKey'],
   ],
   做的一些项目: [
     life.tran,
