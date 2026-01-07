@@ -2,10 +2,12 @@
 import Top from './Top/Top.vue'
 import Bottom from './Bottom/index.vue'
 import unoDirectionBall from './Background/unoDirectionBall.vue'
+import AllPoint from '@/layout/Background/allPoint.vue'
 export default defineComponent({
   name: 'TopHead',
 
   components: {
+    AllPoint,
     Top,
     Bottom,
     unoDirectionBall
@@ -29,6 +31,7 @@ export default defineComponent({
       sm:w-full
       xl:w-screen-md
     />
-    <unoDirectionBall />
+<!--    <unoDirectionBall />-->
+    <all-point />
   </div>
 </template>
