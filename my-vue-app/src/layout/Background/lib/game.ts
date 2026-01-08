@@ -9,6 +9,8 @@ interface GameInterface {
   clearState: Function,
   loadCircle?: Function,
   render: Function,
+  mouseX: number,
+  mouseY: number,
 }
 
 
@@ -21,11 +23,17 @@ export const Game = function(canvas) {
     ctx: null,
     width: Width.value,
     height: Height.value,
+    mouseX: 0,
+    mouseY: 0,
   } as GameInterface
   const canvasDom = canvas.value
   const ctx = canvas.value.getContext('2d')
   canvas.value.style.width = Width.value
   o.ctx = ctx
+  canvas.value.addEventListener('mousemove', function(ev) {
+    o.mouseX = ev.x
+    o.mouseY = ev.y
+  })
   o.init = function() {
     o.canvas.width = Width.value
     o.canvas.height = Height.value
@@ -54,15 +62,14 @@ export const Game = function(canvas) {
 
   /* 渲染舞台 */
   o.render = function() {
-    setInterval(() => {
-      o.clearState()
-      for (const key in o.state) {
-        var item = o.state[key]
-        item.forEach(state => {
-          state.update(o)
-        })
-      }
-    }, 1000 / 60);
+    o.clearState()
+    for (const key in o.state) {
+      var item = o.state[key]
+      item.forEach(state => {
+        state.update(o)
+      })
+    }
+    requestAnimationFrame(o.render)
   }
 
   return o

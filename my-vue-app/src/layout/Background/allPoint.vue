@@ -5,7 +5,7 @@ const canvas = ref(null)
 
 class PointState {
   constructor() {
-    this.gap = 30
+    this.gap = 25
     this.name = 'PointState'
     this.color = '#494949'
     this.radius = 1.5
@@ -28,19 +28,37 @@ class PointState {
 
   }
 
-  init(ctx) {
-    let g = 51
+  init(ctx, game = {}) {
     this.pointRect.forEach((item, index) => {
-      let cosNum = item[1]
       if (!this.keyStatus[index]) {
         this.keyStatus[index] = {
           x: item[0],
           y: item[1],
-          cosNum: cosNum
+          angle: 0,
+          amplitude: 5,
+          speed: 0.01,
+          trackRadius: 2,
+          centerX: item[0],
+          centerY: item[1],
+
         }
       }
 
-      this.draw(ctx, item[0], this.keyStatus[index].cosNum)
+
+      let currentX = this.keyStatus[index].centerX + this.keyStatus[index].trackRadius * Math.cos(this.keyStatus[index].angle);
+      let currentY = this.keyStatus[index].centerY + this.keyStatus[index].trackRadius * Math.sin(this.keyStatus[index].angle);
+
+      // 判断当前坐标在不在鼠标经过的范围, 鼠标范围大一点
+      let mouseRange = 10
+      if (game.mouseX >= currentX - mouseRange && game.mouseX <= currentX + mouseRange && game.mouseY >= currentY - mouseRange && game.mouseY <= currentY + mouseRange) {
+        this.keyStatus[index].speed = 1
+      } else {
+        this.keyStatus[index].speed = .01
+      }
+
+      // const currentY = this.keyStatus[index].y + this.keyStatus[index].amplitude * Math.sin(this.keyStatus[index].angle);
+      this.keyStatus[index].angle +=  this.keyStatus[index].speed;
+      this.draw(ctx, currentX, currentY)
     })
   }
 
@@ -53,7 +71,7 @@ class PointState {
 
 
   update(game) {
-   this.init(game.ctx)
+   this.init(game.ctx, game)
   }
 }
 
