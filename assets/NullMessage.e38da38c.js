@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t}from"./index.309a0172.js";const a={},c={class:"null-message-wrap default-text"};function o(r,n){return s(),t("div",c," \u5566\u5566\u5566~ \u7B49\u5F85\u66F4\u65B0\u54E6 yo~ ")}var l=e(a,[["render",o]]);export{l as default};
