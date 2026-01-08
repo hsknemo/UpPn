@@ -51,7 +51,7 @@ class PointState {
       // 判断当前坐标在不在鼠标经过的范围, 鼠标范围大一点
       let mouseRange = 10
       if (game.mouseX >= currentX - mouseRange && game.mouseX <= currentX + mouseRange && game.mouseY >= currentY - mouseRange && game.mouseY <= currentY + mouseRange) {
-        this.keyStatus[index].speed = 1
+        this.keyStatus[index].speed = .05
       } else {
         this.keyStatus[index].speed = .01
       }
