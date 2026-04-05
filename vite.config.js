@@ -38,8 +38,5 @@ export default defineConfig({
   },
   server:{
     host:'0.0.0.0'
-  },
-  build:{
-    outDir: 'Self',//Specify the output directory (relative to project root).
   }
 })
