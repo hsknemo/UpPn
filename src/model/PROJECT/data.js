@@ -8,7 +8,7 @@ import Terminal from './iconComponent/Terminal.vue'
 import mapbox from "@/model/PROJECT/iconComponent/Mapbox.vue";
 import Tone from "@/model/PROJECT/iconComponent/Tone.vue";
 import Tran from '@/model/PROJECT/iconComponent/Tran.vue'
-import MaterialSymbolsAlarm from '@/model/PROJECT/iconComponent/MaterialSymbolsAlarm.vue'
+import MaterialSymbolsAlarm from '@/model/PROJECT/iconComponent/Timer.vue'
 const Projects = reactive({
   pro: [
     {
