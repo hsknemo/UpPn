@@ -1,27 +1,20 @@
-# Netlify 部署配置文件（适配 pnpm + Node18 兼容版）
 [build]
-# 自定义构建命令（与你日志中识别的一致）
 command = "npm run build"
-# 自定义发布目录（与你日志中识别的 dist 路径一致）
 publish = "dist"
-# 构建超时时间（默认 15 分钟，延长至 20 分钟避免大项目构建超时）
-timeout = 1200
 
-[build.environment]
-# 核心：指定兼容 pnpm 的 Node.js 版本（推荐 18.x 稳定版）
-NODE_VERSION = "18.20.2"
-# 启用 Corepack（自动管理 pnpm 版本，避免版本冲突）
-COREPACK_ENABLED = "true"
-# 可选：锁定 pnpm 版本（进一步确保兼容性，可根据项目实际依赖调整）
-PNPM_VERSION = "8.15.6"
+[dev]
+command = "npm run dev"
+port = 5173
+framework = "vite"
 
-# 缓存配置（加速后续部署，仅缓存依赖目录）
-[build.cache]
-paths = [
-  "node_modules/**/*",
-  ".pnpm-store/**/*"
-]
+[headers]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
 
-# 部署前钩子（可选，自动安装 pnpm 最新兼容版）
-[buildhooks]
-pre_build = "corepack prepare pnpm@latest --activate"
+[redirects]
+from = "/*"
+to = "/index.html"
+status = 200
