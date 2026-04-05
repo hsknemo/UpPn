@@ -8,6 +8,7 @@ import Terminal from './iconComponent/Terminal.vue'
 import mapbox from "@/model/PROJECT/iconComponent/Mapbox.vue";
 import Tone from "@/model/PROJECT/iconComponent/Tone.vue";
 import Tran from '@/model/PROJECT/iconComponent/Tran.vue'
+import MaterialSymbolsAlarm from '@/model/PROJECT/iconComponent/MaterialSymbolsAlarm.vue'
 const Projects = reactive({
   pro: [
     {
@@ -75,8 +76,13 @@ const Projects = reactive({
           icon: PainStr,
           name: 'PainStr',
           desc: '封装的动态插入 CSS 样式, 通过循环插入样式, 慢慢插入 CSS 出现效果',
-          // url: 'https://github.com/hsknemo/PaintStr'
           url: 'https://paint-str.vercel.app/'
+        },
+        {
+          icon: MaterialSymbolsAlarm,
+          name: '番茄时钟',
+          desc: '一个番茄时钟',
+          url: 'https://hello-pomodoro.netlify.app/'
         }
       ]
     },
