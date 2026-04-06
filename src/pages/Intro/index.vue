@@ -1,7 +1,7 @@
 
 <script setup>
 
-  const mineRef = ref()
+  const mineRef = ref('')
   const readmd = async function(callback) {
     callback(await import('./mine.md'))
   }

@@ -54,15 +54,32 @@ a {
 }
 
 .blog_img {
-  margin: 10px 0;
-  width: 600px;
-  height: 300px;
-  box-shadow: 0 0 5px 0 var(--half-gray-128);
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  border-radius: 10px;
-  transition: all 0.3s;
+  margin: 20px auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.4s ease;
 }
 .blog_img:hover {
-  transform: scale(1.2);
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* 图片容器，用于响应式布局 */
+.img-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* 图片标题/说明 */
+.img-caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--half-gray-128);
+  text-align: center;
+  font-style: italic;
 }/*# sourceMappingURL=theme.css.map */

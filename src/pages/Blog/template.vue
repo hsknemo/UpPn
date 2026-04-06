@@ -202,28 +202,111 @@ defineComponent({
     scroll-behavior: smooth;
     overflow: auto;
     max-height: 850px;
+    line-height: 1.8;
+    font-family: var(--common-font-family);
     ::v-deep  {
       h1 {
-        font-size: 1.55em;
+        font-size: 2em;
         font-weight: 800;
         color: var(--md-h1-color);
         font-family: var(--md-sytem-font);
+        margin: 1.5em 0 1em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
       }
 
-      li,
-      p,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+      h2 {
+        font-size: 1.6em;
+        font-weight: 700;
+        color: var(--md-h1-color);
+        margin: 1.3em 0 0.8em;
+      }
+
+      h3 {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: var(--md-h1-color);
+        margin: 1.2em 0 0.7em;
+      }
+
+      h4, h5, h6 {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: var(--md-h1-color);
+        margin: 1em 0 0.6em;
+      }
+
+      p {
         color: var(--half-gray-128);
+        margin: 0.8em 0;
+        text-align: justify;
       }
 
+      li {
+        color: var(--half-gray-128);
+        margin: 0.3em 0;
+      }
+
+      ul, ol {
+        margin: 0.8em 0 0.8em 1.5em;
+      }
 
       code {
         overflow: auto;
         display: block;
+        background-color: var(--md-code-bg);
+        padding: 1em;
+        border-radius: 6px;
+        font-family: 'InputMono', monospace;
+        font-size: 0.9em;
+        line-height: 1.5;
+        margin: 1em 0;
+      }
+
+      pre {
+        margin: 1em 0;
+        overflow: auto;
+      }
+
+      a {
+        color: var(--md-h1-color);
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+
+      blockquote {
+        border-left: 4px solid var(--md-h1-color);
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        background-color: rgba(128, 128, 128, 0.05);
+        border-radius: 0 4px 4px 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1em 0;
+      }
+
+      th, td {
+        padding: 0.8em;
+        text-align: left;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+      }
+
+      th {
+        font-weight: 600;
+        color: var(--md-h1-color);
+        background-color: rgba(128, 128, 128, 0.05);
+      }
+
+      tr:hover {
+        background-color: rgba(128, 128, 128, 0.05);
       }
     }
   }
