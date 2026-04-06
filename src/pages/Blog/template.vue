@@ -146,6 +146,54 @@ const addCopy = () => {
   })
 }
 
+// 为图片添加点击放大功能
+const addImagePreview = () => {
+  let images = document.querySelectorAll('.template-container img')
+  Array.from(images).forEach(img => {
+    // 确保图片有src属性
+    if (img.src) {
+      // 为图片添加点击事件
+      img.style.cursor = 'pointer'
+      img.onclick = (ev) => {
+        ev.stopPropagation()
+        // 创建预览容器
+        const previewContainer = document.createElement('div')
+        previewContainer.className = 'image-preview-container'
+        previewContainer.style.position = 'fixed'
+        previewContainer.style.top = '0'
+        previewContainer.style.left = '0'
+        previewContainer.style.width = '100%'
+        previewContainer.style.height = '100%'
+        previewContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'
+        previewContainer.style.zIndex = '9999'
+        previewContainer.style.display = 'flex'
+        previewContainer.style.alignItems = 'center'
+        previewContainer.style.justifyContent = 'center'
+        
+        // 创建预览图片
+        const previewImg = document.createElement('img')
+        previewImg.src = img.src
+        previewImg.style.maxWidth = '90%'
+        previewImg.style.maxHeight = '90%'
+        previewImg.style.objectFit = 'contain'
+        
+        // 添加到容器
+        previewContainer.appendChild(previewImg)
+        
+        // 添加关闭事件
+        previewContainer.onclick = (e) => {
+          if (e.target === previewContainer) {
+            document.body.removeChild(previewContainer)
+          }
+        }
+        
+        // 添加到文档
+        document.body.appendChild(previewContainer)
+      }
+    }
+  })
+}
+
 
 const onJump = async () => {
   let urlHash = window.location.hash
@@ -206,7 +254,7 @@ defineComponent({
     font-family: var(--common-font-family);
     ::v-deep  {
       h1 {
-        font-size: 2em;
+        font-size: 1.6em;
         font-weight: 800;
         color: var(--md-h1-color);
         font-family: var(--md-sytem-font);
@@ -216,21 +264,21 @@ defineComponent({
       }
 
       h2 {
-        font-size: 1.6em;
+        font-size: 1.4em;
         font-weight: 700;
         color: var(--md-h1-color);
         margin: 1.3em 0 0.8em;
       }
 
       h3 {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 600;
         color: var(--md-h1-color);
         margin: 1.2em 0 0.7em;
       }
 
       h4, h5, h6 {
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: 600;
         color: var(--md-h1-color);
         margin: 1em 0 0.6em;
