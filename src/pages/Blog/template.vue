@@ -122,6 +122,7 @@ unMdByRoute(async target => {
   str.value = pluginExp(target.html, 'bbb加粗文本', 'bbb')
   await delay(1000)
   addCopy()
+  addImagePreview()
   article_collection_by_domStr(str.value)
   onJump()
 })
