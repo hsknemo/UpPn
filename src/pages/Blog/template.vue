@@ -170,24 +170,24 @@ const addImagePreview = () => {
         previewContainer.style.display = 'flex'
         previewContainer.style.alignItems = 'center'
         previewContainer.style.justifyContent = 'center'
-        
+
         // 创建预览图片
         const previewImg = document.createElement('img')
         previewImg.src = img.src
         previewImg.style.maxWidth = '90%'
         previewImg.style.maxHeight = '90%'
         previewImg.style.objectFit = 'contain'
-        
+
         // 添加到容器
         previewContainer.appendChild(previewImg)
-        
+
         // 添加关闭事件
         previewContainer.onclick = (e) => {
           if (e.target === previewContainer) {
             document.body.removeChild(previewContainer)
           }
         }
-        
+
         // 添加到文档
         document.body.appendChild(previewContainer)
       }
@@ -309,11 +309,9 @@ defineComponent({
         font-family: 'InputMono', monospace;
         font-size: 0.9em;
         line-height: 1.5;
-        margin: 1em 0;
       }
 
       pre {
-        margin: 1em 0;
         overflow: auto;
       }
 

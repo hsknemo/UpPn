@@ -55,6 +55,15 @@ const skill = {
 }
 
 const life = {
+  '内心日记': {
+    ...new Template({
+      path: 'life/nei-xin-zheng-zha',
+      name: '内心日记',
+      text: '内心日记',
+      time: '26 Apr 24',
+      readTime: '5 min'
+    })
+  },
   上海疫情: {
     ...new Template({
       path: 'life/shang-hai-yi-qing',
@@ -214,6 +223,14 @@ const classes = {
 
 
 const data = {
+  生活小记: [
+    life.前端之路,
+    life.上海疫情,
+    life.周日日记,
+    life.新的希望,
+    life.内心日记,
+    // life.送给老弟,
+  ],
   前端: [
     frontKnowlage["v3-study"],
     frontKnowlage['chunk-upload'],
@@ -236,16 +253,7 @@ const data = {
   //   skill.前端开发套路,
   //   skill.bar,
   // ],
-  // 生活小记
-  生活小记: [
-    life.前端之路,
-    life.上海疫情,
-    life.周日日记,
-    life.新的希望,
-    movie['dong-ji-dao'],
-    movie['xiao-shen-ke'],
-    // life.送给老弟,
-  ],
+
   // 心灵鸡汤
   心灵鸡汤: [
     life.浪潮,
