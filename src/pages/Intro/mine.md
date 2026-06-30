@@ -1,9 +1,13 @@
 
-Hey! I'm  ```up-keyword nemo ``` 😄, a ```up-keyword Front-End Developer```  in ShangHai, China.
+# Hsknemo
+
+Hey！I'm Hsknemo 😄, a ```up-keyword FrontEnd Developer❤```  in ShangHai, China.
+
+Now I'm working on gis company.
 
 I have used my front-end knowledge to make some interesting things.
 
-Write Some Code:
+Wrote Some Code:
 - Node.js Spider 
 - ```up-a https://maplitedoc.netlify.app/  | MapLite ```
 - ```up-a https://trandoc.netlify.app/  | VTran ```: This is a tool for file transfer and chat within a local area network that can be used on the browser side. It was built for my team because we are not allowed to install other interactive software during intranet development
@@ -15,13 +19,13 @@ Write Some Code:
   - ```up-a https://github.com/hsknemo/DSCN-COPY-CODE | CSDN Copy Code ```  : CSDN website is a plug-in that can copy text without login.
     
 
-How Find Me:
+Find me:
   - ```up-a https://github.com/hsknemo?tab=repositories) | Git ```
 
-Skill of use:
-    ```up-keyword Node ```
-    ```up-keyword Vue ```
-    ```up-keyword Mapbox ```
-    ```up-keyword Openlayers ```
-    ...
+Use:
+    ```up-keyword Node.js ```
+    ```up-keyword Vue.js ```
 
+About Gis:
+```up-keyword Mapbox ```
+```up-keyword Openlayers ```

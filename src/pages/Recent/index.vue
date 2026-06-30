@@ -12,15 +12,15 @@ const demoList = [
   {
     title: 'VTran',
     version: 'v1.',
-    magicTag: '1.9',
-    time: '2025-12-03 13:56:00',
+    magicTag: '2.0',
+    time: '2026-6-29 13:56:00',
     link: 'https://github.com/hsknemo/vtran.git'
   },
   {
     title: 'Tran Server',
     version: 'v1.',
-    magicTag: '1.6',
-    time: '2025-12-03 13:56:00',
+    magicTag: '1.7',
+    time: '2026-6-29 13:56:00',
     link: 'https://github.com/hsknemo/vtran-server.git'
   }
 ]

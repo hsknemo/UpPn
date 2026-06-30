@@ -7,7 +7,7 @@ class PointState {
   constructor() {
     this.gap = 25
     this.name = 'PointState'
-    this.color = '#494949'
+    this.color = 'rgb(48,46,46)'
     this.radius = 1.5
     this.x = Math.random() * canvas.value.width
     this.y = Math.random() * canvas.value.height
@@ -95,6 +95,18 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+// 白色主题隐藏
+@media (prefers-color-scheme: light) {
+  #canvas {
+    display: none !important;
+  }
+}
+
+html.light {
+  #canvas {
+    display: none !important;
+  }
+}
 #canvas {
   position: fixed;
   top: 0;

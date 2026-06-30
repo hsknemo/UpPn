@@ -11,22 +11,13 @@
   })
 
   readmd(async target => {
-    if (localStorage.getItem('wrote')) {
-      mineRef.value = target.html
-      return
-    }
-    localStorage.setItem('wrote', true)
-    for (let i = 0; i < target.html.length; i++) {
-      await delay(1000 / 60)
-      mineRef.value += target.html[i]
-    }
     mineRef.value = target.html
   })
 
 
 </script>
 <template>
-  <div class="max-full intro-container" >
+  <div class="max-full intro-container" animated-bounce>
     <div v-html="mineRef" v-highlight></div>
   </div>
 </template>
@@ -42,13 +33,8 @@
   }
 }
 .intro-container {
-  width: 50%;
   padding: 1.2em;
   box-sizing: border-box;
-
-
-
-
   &:deep {
     h1, h2, h3, h4, h5, h6 {
       a {
@@ -56,7 +42,7 @@
       }
     }
     p {
-      margin-top: 2em;
+      margin-top: 1em;
       color: var(--half-gray-128);
     }
 
@@ -83,9 +69,8 @@
       margin-left: 1.5em;
     }
     p {
-        font-family: 'inter var', 'sans-serif';
-        line-height: 1.6;
-        letter-spacing: 1px;
+        font-family: Inter;
+        line-height: 1.75;
       }
     h1 {
       font-size: var(--intro-h1-size);

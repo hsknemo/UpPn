@@ -332,6 +332,10 @@ defineComponent({
         margin: 1em 0;
         background-color: rgba(128, 128, 128, 0.05);
         border-radius: 0 4px 4px 0;
+
+        p {
+          margin: unset;
+        }
       }
 
       table {

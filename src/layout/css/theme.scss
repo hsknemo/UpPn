@@ -1,8 +1,7 @@
 @import url('./light.css');
 @import url('./night.css');
-@import url('./font/regisFont.css');
 @import url('./markdown.css');
-
+@import "../../assets/css/app";
 
 html:root {
   --half-gray-128: rgb(128, 128, 128);
