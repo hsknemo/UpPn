@@ -49,7 +49,7 @@
       <Fa7BrandsEllo  @click="isOpen = !isOpen"/>
     </div>
     <div >
-      <Title title="Blogs"></Title>
+      <Title title="BLOGS"></Title>
       <div class="title-wrap"
            :class="[
            {

@@ -34,6 +34,7 @@
     height: 100%;
     overflow: auto;
     background-color: var(--bg-color);
+    transition: background-color 0.5s linear;
   }
   #nprogress .bar {
     height: var(--ngprogress-bar-height) !important;

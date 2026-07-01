@@ -70,7 +70,7 @@ const Projects = reactive({
           icon: Terminal,
           name: 'Terminal',
           desc: '一个非常 COOL の 终端',
-          url: '/#/terminal'
+          url: '/terminal'
         },
         {
           icon: PainStr,

@@ -1,7 +1,7 @@
 
 # Hsknemo
 
-Hey！I'm Hsknemo 😄, a ```up-keyword FrontEnd Developer❤```  in ShangHai, China.
+Hey！I'm Hsknemo 😄, a ```up-keyword FrontEnd Developer ❤```.
 
 Now I'm working on gis company.
 

@@ -34,7 +34,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="right_container" >
-      <Title title="Projects" />
+      <Title title="PROJECTS" />
       <div
         class="list-container"
         :key="index"
@@ -113,10 +113,11 @@ onMounted(() => {
   box-sizing: border-box;
 }
 .catgory-name {
+  @apply font-italic font-bold;
   font-family: var(--inter-font-family);
   margin-bottom: .1em;
   z-index: -1;
-  font-size: 25px;
+  font-size: 20px;
   -webkit-text-stroke: 1px var(--half-gray-128);
   white-space: nowrap;
   -webkit-text-fill-color: transparent;
