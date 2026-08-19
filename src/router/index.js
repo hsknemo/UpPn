@@ -18,6 +18,7 @@ const Layout = () => import('@/layout/index.vue')
 import LineVue from '../playground/Line.vue'
 import Board from './DrawBoard/index'
 import Recent from '@/router/Recent'
+import Resume from '@/pages/resume/resume.vue'
 
 var routes = [
   {
@@ -51,6 +52,13 @@ var routes = [
       {
         path: '/playground/line',
         component: LineVue
+      },
+      {
+        path: '/resume',
+        component: Resume,
+        meta: {
+          simplePage: true
+        }
       }
     ]
   },
