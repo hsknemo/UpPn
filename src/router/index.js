@@ -53,16 +53,16 @@ var routes = [
         path: '/playground/line',
         component: LineVue
       },
-      {
-        path: '/resume',
-        component: Resume,
-        meta: {
-          simplePage: true,
-        }
-      }
-    ]
-  },
 
+    ],
+  },
+  {
+    path: '/resume',
+    component: Resume,
+    meta: {
+      simplePage: true,
+    }
+  }
 ]
 
 export const router = createRouter({
