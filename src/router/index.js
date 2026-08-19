@@ -57,7 +57,7 @@ var routes = [
         path: '/resume',
         component: Resume,
         meta: {
-          simplePage: true
+          simplePage: true,
         }
       }
     ]
