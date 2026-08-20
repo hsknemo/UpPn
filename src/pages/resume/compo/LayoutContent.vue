@@ -7,7 +7,7 @@ const prop = defineProps({
 </script>
 
 <template>
-  <main class="content" :--tit="prop.tit">
+  <main class="content" :tit="prop.tit">
     <div class="c-top"></div>
     <slot name="content"></slot>
   </main>
@@ -31,7 +31,7 @@ body.pdf {
     left: 0;
     top: 0;
     padding-left: 30px;
-    content: attr(--tit);
+    content: attr(tit);
     font-size: 14px;
     line-height: 26px;
     color: #fff;
