@@ -2,12 +2,16 @@
 const prop = defineProps({
   tit: {
     type: String
+  },
+
+  notBorder: {
+    type: Boolean
   }
 })
 </script>
 
 <template>
-  <main class="content" :tit="prop.tit">
+  <main class="content" :class="{notBorder: notBorder}" :tit="prop.tit">
     <div class="c-top"></div>
     <slot name="content"></slot>
   </main>
@@ -26,6 +30,12 @@ body.pdf {
   position: relative;
   padding: 28px;
   box-sizing: border-box;
+  &.notBorder {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
   &:before {
     position: absolute;
     left: 0;

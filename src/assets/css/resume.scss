@@ -1,0 +1,59 @@
+@mixin flexStyle($align:'center', $justContent:'space-around') {
+  display: flex;
+  align-items: $align;
+  justify-content: $justContent;
+}
+
+@mixin IconNormal() {
+  font-style: normal;
+  display: block;
+  line-height: 20px;
+}
+
+i {
+  @include IconNormal;
+}
+
+
+.layout-content {
+  margin-bottom: 26px;
+
+  .experience {
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--half-gray-128);
+      margin: 10px 0;
+    }
+
+    .desc {
+      text-indent: 2em;
+      color: #7b7b7b;
+    }
+  }
+  .experience-item {
+    @include flexStyle();
+    gap: 5px;
+    margin-top: 8px;
+    span {
+      text-align: justify;
+    }
+  }
+}
+
+
+[slide-in-up],.slide-in-up {
+  animation: slide-in-up 1s linear;
+}
+
+@keyframes slide-in-up{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
