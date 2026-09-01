@@ -31,7 +31,7 @@ async function handleExportPdf() {
   const el = document.querySelector('.resume-body')
   const opt = {
     margin: 0,
-    filename: "my-resume.pdf",
+    filename: "秦凯18790554504.pdf",
     image: { type: "jpeg", quality: 0.95 },
     html2canvas: { scale: 2 },
     jsPDF: {
